@@ -17,10 +17,11 @@ body, html {
 
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size:auto
+  background-size: cover;
 }
 
 /* First image (Logo. Full height) */
@@ -53,7 +54,6 @@ body, html {
 @media only screen and (max-device-width: 1200px) {
   .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: scroll;
-    min-height: 400px;
   }
 }
 
