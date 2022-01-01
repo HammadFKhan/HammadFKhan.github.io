@@ -13,6 +13,7 @@ body, html {
   color: rgb(255, 255, 255);
   line-height: 1.8;
   background-color: rgb(22 36 43);
+  scroll-behavior: smooth;
 }
 
 /* Create a Parallax Effect */
@@ -77,8 +78,17 @@ body, html {
   color:white;
 }
 
+.bar2{
+  background-color: rgb(4, 138, 143);
+  color:white;
+}
+
+
 .w3-wide {letter-spacing: 10px;}
+.w3-wide2{letter-spacing: 5px;}
 .w3-hover-opacity {cursor: pointer;}
+.w3-button{transition: 0.3s;transition: transform .3s;}
+.w3-button:hover{transform: scale(1.1); }
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1200px) {
@@ -117,16 +127,16 @@ body, html {
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container" id="home">
-  <div class="w3-display-middle" style="white-space:normal;">
-    <span class="w3-center w3-padding-medium w3-xlarge w3-wide w3-animate-opacity" style = "background-color:rgba(0, 0, 0, 0.7);">
-      Brain, Devices, Technology</span>
+  <div class="w3-display-middle" style="background-color:rgba(0, 0, 0, 0.7);">
+    <h1 class="w3-center w3-xxlarge w3-wide w3-animate-opacity">BRAIN, DATA, TECHNOLOGY</h1><br>
+    <h1 class="w3-center w3-large w3-wide2 w3-animate-opacity w3-text-orange"><em>"Like many other fields, science has its fashions"</em></h1>
   </div>
 </div>
 
 <!-- Container (About Section) -->
 <div class="w3-content w3-container w3-padding-64" id="about">
   <h3 class="w3-center">ABOUT ME</h3>
-  <p class="w3-center"><em>Understanding the language of the brain</em></p>
+  <p class="w3-center"><em>Understanding how our brains work</em></p>
   <div class="w3-row">
     <div class="w3-col m6 w3-center w3-padding-large">
       <img src="picofMe.jpg" class="w3-round w3-image" alt="Photo of Me" width="500" height="333">
@@ -142,7 +152,7 @@ body, html {
         and nanofabrication for in vivo application in awake, behaving mice.</p>
     </div>
   </div>
-  <p class="w3-large w3-center w3-padding-16">What I do:</p>
+  <h3 class=" w3-center w3-padding-16">WHAT I DO:</h3>
   <p class="w3-wide"><i class="fa fa-cogs"></i>Nanofabrication</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small bar w3-center" style="width:90%">90%</div>
@@ -151,7 +161,7 @@ body, html {
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small bar w3-center" style="width:85%">85%</div>
   </div>
-  <p class="w3-wide"><i class="fa fa-photo"></i>2p Imaging</p>
+  <p class="w3-wide"><i class="fa fa-photo"></i>2-photon Calcium Imaging</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small bar w3-center" style="width:75%">75%</div>
   </div>
@@ -161,57 +171,55 @@ body, html {
   </div>
 </div>
 
-<div class="w3-row w3-center bar w3-padding-16">
-  <div class="w3-third w3-section">
-    <span class="w3-wide">THE BEAUTY OF THE BRAIN </span><br>
-  </div>
-  <div class="w3-third w3-section">
-    <span class="w3-wide">THE BIG QUESTION</span><br>
-  </div>
-  <div class="w3-third w3-section">
-    <span class="w3-wide">MOVING FORWARD</span><br>
-  </div>
-</div>
-
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container">
+<div class="bgimg-2 w3-display-container" id="portfolio">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide" style = "background-color:rgba(0, 0, 0, 0.7);">RESEARCH</span>
   </div>
 </div>
 
+<!-- Research link bar-->
+<div class="bar2 w3-padding-32">
+  <div class="w3-row-padding">
+    <a href="rs.html#brain" class="w3-third m3 w3-center w3-large w3-wide2 w3-padding-32 w3-button w3-hover-black" style="white-space:normal;">
+      THE BEAUTY OF THE BRAIN </a>
+    <a href="rs.html#question" class="w3-third m3 w3-center w3-large w3-wide2 w3-padding-32 w3-button w3-hover-black" style="white-space:normal;">
+      THE BIG QUESTION</a>
+    <a href="future.html" class="w3-third m3 w3-center w3-large w3-wide2 w3-padding-32 w3-button w3-hover-black" style="white-space:normal;">
+      MOVING FORWARD </a>
+  </div>
+</div>
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-32" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here are snippets of my latest work.<br> Click on the images to make them bigger</em></p><br>
+<div class="w3-content w3-container w3-padding-32">
+  <p class="w3-center w3-medium"><em>Here are snippets of my latest work<br> Click on the images to make them bigger</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding">
     <div class="w3-third m3 w3-center">
-      <img src="pic1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist over the mountains">
+      <img src="pic1.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Silicon wafer for scalable device fabrication">
     </div>
 
     <div class="w3-third m3 w3-center">
-      <img src="pic2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Coffee beans">
+      <img src="pic2.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Virtual reality immersion for behavioral mice experiments">
     </div>
 
     <div class="w3-third m3 w3-center">
-      <img src="pic3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Bear closeup">
+      <img src="pic3.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="dNeuronal population imaged through 2-photon microscopy">
     </div>
 
   </div>
 
   <div class="w3-row-padding w3-section">
     <div class="w3-third m3 w3-center">
-      <img src="pic5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="The mist">
+      <img src="pic5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Conductive electrode sites">
     </div>
 
     <div class="w3-third m3 w3-center">
-      <img src="pic6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="My beloved typewriter">
+      <img src="pic6.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Artistic dendition of CMOS circuit design">
     </div>
     
     <div class="w3-third m3 w3-center">
-        <img src="pic4.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Quiet ocean">
+        <img src="pic4.png" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Signaling traces of neurons">
     </div>
   </div>
   <a href = "rs.html" class="w3-center w3-button w3-hover-black w3-hover-text-white w3-padding-large w3-light-grey" style="margin-top:64px">LEARN MORE</a>
@@ -227,14 +235,14 @@ body, html {
 </div>
 
 <!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container">
+<div class="bgimg-3 w3-display-container" id="contact">
   <div class="w3-display-middle">
      <span class="w3-xxlarge w3-text-white w3-wide" style = "background-color:rgba(0, 0, 0, 0.7);">CONTACT</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64" id="contact">
+<div class="w3-content w3-container w3-padding-64">
   <h3 class="w3-center">WHERE I WORK</h3>
   <p class="w3-center"><em>Nano NeuroTechnology Lab</em></p>
   <div class="w3-row w3-padding-32 w3-section">
