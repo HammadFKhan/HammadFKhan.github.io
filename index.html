@@ -17,7 +17,6 @@ body, html {
   line-height: 1.8;
   background-color: rgb(22 36 43);
   scroll-behavior: smooth !important;
-   chrome://flag/#smooth-scrolling;
 }
 
 /* Create a Parallax Effect */
@@ -75,6 +74,27 @@ body, html {
   bottom: 0px;
   left: 0px;
   background-color:rgba(0,0,0,0.3);
+}
+
+/* Image behind word backgrounds */
+.bgimg-4 {
+  background-image: url("Neuron_1.png");
+  min-height: 400px;
+  background-repeat:repeat;
+  fill-opacity: 10%;
+
+}
+
+.bgimg-4::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color:rgba(0,0,0,1);
+  background-repeat: no-repeat;
+
 }
 
 .bar{
@@ -174,8 +194,6 @@ body, html {
     </div>
   </div>
  <!-- What I do bars -->
- <div>
-
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
@@ -197,7 +215,7 @@ body, html {
   </div>
 </div>
 <!-- Container (Portfolio Section) -->
-<div class="w3-content w3-container w3-padding-32">
+<div class="bgimg-4 w3-content w3-container w3-padding-32">
   <p class="w3-center w3-medium"><em>Here are snippets of my latest work<br> Click on the images to make them bigger</em></p><br>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
@@ -218,7 +236,7 @@ body, html {
 
   <div class="w3-row-padding w3-section">
     <div class="w3-third m3 w3-center">
-      <img src="pic5.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Conductive electrode sites">
+      <img src="M1_ROI1_00003-2.gif" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Subcellular population response">
     </div>
 
     <div class="w3-third m3 w3-center">
