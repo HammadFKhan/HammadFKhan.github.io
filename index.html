@@ -20,7 +20,7 @@ body, html {
 }
 
 /* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-3,.bgimg-5,.bgimg-6,.bgimg-7 {
   position: relative;
   background-attachment: fixed;
   background-position: center;
@@ -96,6 +96,53 @@ body, html {
   background-repeat: no-repeat;
 
 }
+/* First image (Logo. Full height) */
+.bgimg-5 {
+  background-image: url('rspic2.png');
+  min-height: 100%;
+}
+
+.bgimg-5::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Second image (Portfolio) */
+.bgimg-6 {
+  background-image: url("rspic3.jpg");
+  min-height: 400px;
+}
+
+.bgimg-6::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+/* Third image (Contact) */
+.bgimg-7 {
+  background-image: url('Asset 6.png');
+  min-height: 400px;
+}
+
+.bgimg-7::before{
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  background-color: rgba(0,0,0,0.1);
+}
 
 .bar{
   background-color: rgb(206, 148, 40);
@@ -116,7 +163,7 @@ body, html {
 
 /* Turn off parallax scrolling for tablets and phones */
 @media only screen and (max-device-width: 1200px) {
-  .bgimg-1, .bgimg-2, .bgimg-3 {
+  .bgimg-1, .bgimg-2, .bgimg-3,.bgimg-5,.bgimg-6,.bgimg-7  {
     background-attachment: scroll;
   }
 }
@@ -197,23 +244,13 @@ body, html {
 </div>
 
 <!-- Second Parallax Image with Portfolio Text -->
-<div class="bgimg-2 w3-display-container" id="portfolio">
+<div class="bgimg-2 w3-display-container" id="">
   <div class="w3-display-middle">
     <span class="w3-xxlarge w3-text-white w3-wide" style = "background-color:rgba(0, 0, 0, 0.7);">RESEARCH</span>
   </div>
 </div>
 
-<!-- Research link bar-->
-<div class="bar2 w3-padding-32">
-  <div class="w3-row-padding">
-    <a href="rs.html#brain" class="w3-third m3 w3-center w3-large w3-wide2 w3-padding-32 w3-button w3-hover-black" style="white-space:normal;">
-      THE BEAUTY OF THE BRAIN</a>
-    <a href="rs.html#question" class="w3-third m3 w3-center w3-large w3-wide2 w3-padding-32 w3-button w3-hover-black" style="white-space:normal;">
-      THE BIG QUESTION</a>
-    <a href="future.html" class="w3-third m3 w3-center w3-large w3-wide2 w3-padding-32 w3-button w3-hover-black" style="white-space:normal;">
-      MOVING FORWARD</a>
-  </div>
-</div>
+
 <!-- Container (Portfolio Section) -->
 <div class="bgimg-4 w3-content w3-container w3-padding-32">
   <p class="w3-center w3-medium"><em>Here are snippets of my latest work<br> Click on the images to make them bigger</em></p><br>
@@ -259,15 +296,115 @@ body, html {
   </div>
 </div>
 
-<!-- Third Parallax Image with Portfolio Text -->
-<div class="bgimg-3 w3-display-container" id="contact">
-  <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide" style = "background-color:rgba(0, 0, 0, 0.7);">CONTACT</span>
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-5 w3-display-container" id="portfolio">
+  <div class="w3-display-middle" style = "background-color:rgba(0, 0, 0, 0.7);">
+    <h1 class="w3-center w3-xxlarge w3-wide2 w3-animate-opacity">Movement in healthy and diseased circuits</h1>
   </div>
 </div>
 
+<div class="w3-content w3-container w3-padding-16">
+<div class="w3-col m7 w3-center w3-padding-small">
+  <img src="MovementOverview.png" class="w3-round w3-image" alt="Neuronal Microcircuit" width="500" height="333">
+  <i>Dynamic rerouting of communication subspaces across the motor cortical heirarchy (in prep) </i>
+</div>
+<!-- Hide this text on small devices -->
+<div class="w3-col m5 w3-padding-large">
+  <p>Currently, I'm focusing on understanding neural basis for skilled movement. Abstract-
+    Most brain functions involve interactions among multiple, distinct areas or nuclei. 
+    For instance, generating reliable volitional movement requires multiple neural populations 
+    to work together to produce a desired action. 
+    Yet, how populations of neurons separated by millimeters reliably communicate is still unclear. 
+  </p>
+</div>
+</div>
+
+<div class="w3-content w3-container w3-padding-32"></div>
+<div class="w3-content w3-container w3-padding-0 w3-bar w3-white"></div>
+<div class="w3-content w3-container w3-padding-32"></div>
+
+<div class="w3-content w3-container w3-padding-16">
+<div class="w3-col m7 w3-center w3-padding-small">
+  <img src="PFFOverview.png" class="w3-round w3-image" alt="Neuronal Microcircuit" width="600" height="333">
+  <i>Site-specific seeding of lewy pathtology induces distinct pre-motor cellular and dendritic vulnerabilities (accepted) </i>
+</div>
+<!-- Hide this text on small devices -->
+<div class="w3-col m5 w3-padding-small">
+  <p>Motor degeneration is a hallmark symptomology for patients effected Parkinson’s disease (PD), encompassing a broader range of 
+    neurodegenerative disorders such as Dementia with Lewy Bodies (DLB) 
+    which are characterized by the accumulation of aggregated alpha-synuclein (aSyn).  Historically, PD and DLB were 
+    distinguished based on the timing and severity of cognitive deficits (late and milder in PD versus early 
+    and marked in DLB). However, it has become apparent through the study of disease symptoms and postmortem brain pathology that 
+    these disorders may be part of a single spectrum, sharing a combination of motor and cognitive features, 
+    leaving the exact circuit-based biomarkers distinguishing the gradual progression of PDD and DLB unknown. 
+  </p>
+</div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-6 w3-display-container" id="brain">
+<div class="w3-display-middle" style = "background-color:rgba(0, 0, 0, 0.7);">
+  <h1 class="w3-center w3-xxlarge w3-wide2 w3-animate-opacity">A spacetime code carried by traveling waves</h1>
+</div>
+</div>
+
+<!-- Container (Research Section) -->
+<div class="w3-content w3-container w3-padding-16">
+<div class="w3-col m7 w3-center w3-padding-small" style="font-size:90%; line-height: 1.4" >
+  <img src="TWOverview.png" class="w3-round w3-image" alt="Neuronal Microcircuit" width="600" height="333">
+  <i>A translaminar spacetime code supports touch evoked traveling waves (<a href="https://www.biorxiv.org/content/10.1101/2024.05.09.593381v1">link</a></i>) 
+</div>
+<div class="w3-col m5 w3-padding-small">
+  <p> Local-field-potential (LFP) recordings of sensory stimulus-driven oscillations from the mammalian cortex exhibit ongoing “waves”. 
+    Animal studies have demonstrated that these waves temporally group spikes from ensembles of neurons to constrain network synchrony in fast
+     (35 ms) and slow (1 sec) time packets to filter inputs, modulate brain-state, and ensure efficient information coding. Traditionally, 
+     the LFP across cortical and sub-cortical regions has been thought to involve zero-lag synchrony, 
+    in which oscillations across regions are aligned perfectly in time. However, recent studies,
+     have revealed dynamic timing differences between population responses, leading to the emergence of travelling waves 
+     (TWs) between functionally connected cortical regions. TWs can be defined as a non-stationary pattern of sensory-evoked 
+     cortical activity that spreads out from the point of maximum input in the cortex impacting 
+    neuronal excitability both within and across cortices with precise time (phase) delays. 
+  </p>
+</div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-7 w3-display-container" id="question">
+<div class="w3-display-middle" style = "background-color:rgba(0, 0, 0, 0.7);">
+  <h1 class="w3-center w3-xxlarge w3-wide2 w3-animate-opacity">Neurotechnology development</h1>
+</div>
+</div>
+
+<div class="w3-content w3-container w3-padding-16">
+<div class="w3-col m6 w3-center w3-padding-large" style="font-size:90%; line-height: 1.4" >
+  <img src="rspic5.png" class="w3-round w3-image" alt="Neuronal Microcircuit" width="500" height="333">
+  <i>Multi-curvature micropatterns unveil distinct calcium and mitochondrial dynamics in neuronal networks (<a href="pub1.pdf">pdf</a></i>) 
+</div>
+<div class="w3-col m5 w3-padding-small">
+  <p>
+      Much of my <a href = "https://www.montana.edu/news/19238/for-msu-electrical-engineering-undergraduate-brain-research-offers-a-new-path">undergraduate work</a> revolved around designing and fabricating
+      devices to observe neuronal growth and communication. Particularly looking at how perturbations
+      in
+      various physical topographies effect calcium communication. So why start there? To
+      begin,
+      we
+      need to first take a look at how the human brain develops and changes over time. It is
+      no
+      means a flat plane, rather the neocortex is filled with these "hills and valleys".
+      Biological
+      evolution has allowed our brains to attain a very large volume relative to surface area. If we can model the finer topographical
+      structures
+      in the human cortex on a petri dish, then it stands that we can learn some of the
+      factors
+      that
+      play a role in the morphology of cellular communication and subnetworks.
+  </p>
+</div>
+</div>
+
+
 <!-- Container (Contact Section) -->
-<div class="w3-content w3-container w3-padding-64">
+<div class="w3-content w3-container w3-padding-64 " id = "contact">
   <h3 class="w3-center">WHERE I WORK</h3>
   <p class="w3-center"><em>Nano NeuroTechnology Lab</em></p>
   <div class="w3-row w3-padding-32 w3-section">
